@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>08_photo.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+  </head>
+  
+  <body>
+  	<input id="inputID" type="button" value="jquery库,少写代码,多做事" />
+    <div id="divID">哈哈哈</div>
+  <script type="text/javascript">
+  
+  	//js方式
+  	/*var input = document.getElementById("inputID");
+  	var value = input.value;
+  	alert(value);*/
+  	//jquery方式
+  	/*var input = $("#inputID");
+  	var value = input.val();
+  	alert(value);*/
+  	//js方式
+  	/*var element = document.getElementById("divID");
+  	var value = element.innerHTML;
+  	alert(value);*/
+  	
+  	//js对象转换为jquery对象
+  	var element = document.getElementById("inputID");//js对象
+  	var $element = $(element);//jquery对象
+  	var value = $element.val();
+  	alert(value);
+  	
+  	//jquery对象转换为js对象
+  	var $divEle = $("#divID");//jquery对象
+  	//var div = $divEle.get(0);//js对象
+  	var div = $divEle[0];
+  	var div = div.innerHTML;
+  	alert(div);
+  </script>
+   </body>
+</html>

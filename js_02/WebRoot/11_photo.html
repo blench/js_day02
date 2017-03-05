@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>08_photo.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="js/photo.js"></script>
+  </head>
+  
+  <body>
+    <img src="images/MsgSent.gif" id="imgID"/><br/>
+    <input type="button" id="hide" value="隐藏" style="position:absolute;top:250px;left:50px"/>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="button" id="show" value="显示" style="position:absolute;top:250px;left:100px"/>
+	
+  <script type="text/javascript">
+  	var p = new Photo();
+ 	//可以直接根据#show定位
+  	$("#show").onclick = function()
+  	{
+  		p.show();
+  	}
+  	
+  	$("#hide").onclick = function()
+  	{
+  		p.hide();
+  	}
+  </script>
+   </body>
+</html>

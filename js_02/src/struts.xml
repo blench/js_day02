@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 配置struts2 -->
+	<!--<package name="checknode" extends="struts-default" namespace="/user">
+		<action name="check" class="cn.itcast.js_02.checkcode.CheckcodeAction" method="check">
+		</action>
+	</package>-->
+	
+	<package 
+	name="province" 
+	extends="json-default" 
+	namespace="/">
+	
+	<!-- 配置全局结果 -->
+	<global-results>
+		<result  name="success" type="json"></result>
+	</global-results>
+		<action 
+		name="findCityByProvince" 
+		class="cn.itcast.js_02.provincecityarea.ProvinceCityArea"
+		 method="findCityByProvince">
+		</action>
+		
+		<action 
+		name="findAreaByCity" 
+		class="cn.itcast.js_02.provincecityarea.ProvinceCityArea"
+		 method="findAreaByCity">
+		</action>
+	</package>
+	
+	
+</struts>

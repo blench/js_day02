@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>08_photo.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <img src="images/MsgSent.gif" id="imgID"/><br/>
+    <input type="button" id="hide" value="隐藏" style="position:absolute;top:250px;left:50px"/>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="button" id="show" value="显示" style="position:absolute;top:250px;left:100px"/>
+
+  
+  <script type="text/javascript">
+  	function Photo()
+  	{
+  		//照片
+  		var img = document.images[0];
+  		//隐藏
+  		this.hide = function()
+  		{
+  			img.style.visibility = "hidden";
+  		}
+  		//显示
+  		this.show = function()
+  		{
+  			img.style.visibility = "visible";
+  		}
+  	}
+  </script>
+  <script type="text/javascript">
+  	var p = new Photo();
+  	document.getElementById("hide").onclick = function()
+  	{
+  		p.hide();
+  	}
+  		document.getElementById("show").onclick = function()
+  	{
+  		p.show();
+  	}
+  </script>
+   </body>
+</html>
